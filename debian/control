@@ -1,0 +1,40 @@
+Source: php-mockery
+Section: php
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Debian PHP PEAR Maintainers <pkg-php-pear@lists.alioth.debian.org>
+Uploaders: David Prévot <taffit@debian.org>,
+           Prach Pongpanich <prachpub@gmail.com>
+Build-Depends: debhelper (>= 9),
+               php-hamcrest,
+#               php-mongo,
+               php-redis,
+               phpab,
+               phpunit,
+               pkg-php-tools (>= 1.7~),
+               python-sphinx,
+               python-sphinx-rtd-theme
+Standards-Version: 3.9.8
+Homepage: http://docs.mockery.io
+Vcs-Git: git://anonscm.debian.org/pkg-php/php-mockery.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-php/php-mockery.git
+
+Package: php-mockery
+Architecture: all
+Depends: ${misc:Depends}, ${phpcomposer:Debian-require}
+Recommends: ${phpcomposer:Debian-recommend}
+Suggests: php-mockery-doc, ${phpcomposer:Debian-suggest}
+Replaces: ${phpcomposer:Debian-replace}
+Breaks: ${phpcomposer:Debian-conflict}, ${phpcomposer:Debian-replace}
+Provides: ${phpcomposer:Debian-provide}
+Description: mock object framework for PHPUnit and other testing framework
+ ${phpcomposer:description}.
+
+Package: php-mockery-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}, ${sphinxdoc:Depends}
+Description: mock object framework for PHPUnit - documentation
+ This package provides the documentation for php-opencloud.
+ .
+ ${phpcomposer:description}.

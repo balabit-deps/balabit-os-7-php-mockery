@@ -1,0 +1,2 @@
+Test-Command: phpunit --bootstrap debian/bootstrap.php
+Depends: @, php-redis, phpunit
